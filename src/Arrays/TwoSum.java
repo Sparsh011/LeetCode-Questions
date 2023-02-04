@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class TwoSum {
     public static void main(String[] args) {
+//        Store every element, and it's index in the map. If target - element exists in the map, return the indices.
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of array: ");
         int n = sc.nextInt();

@@ -31,8 +31,12 @@ public class SortStudentsByKthScore {
         int newRow = 0;
 
         for (Map.Entry<Integer, Integer> entry : map.entrySet()){
-            fillArr(res, newRow, score, entry.getValue(), n);
-            newRow++;
+            res[newRow++] = score[entry.getValue()];
+
+//            Another way :
+//            fillArr(res, newRow, score, entry.getValue(), n);
+//            newRow++;
+
         }
 
         return res;
