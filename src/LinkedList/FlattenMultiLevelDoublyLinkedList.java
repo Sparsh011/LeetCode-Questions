@@ -1,7 +1,5 @@
 package LinkedList;
 
-import org.w3c.dom.Node;
-
 import java.util.Stack;
 
 public class FlattenMultiLevelDoublyLinkedList {
