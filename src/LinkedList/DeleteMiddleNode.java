@@ -5,9 +5,9 @@ public class DeleteMiddleNode {
 
     }
 
-    private static ListNode deleteMiddle(ListNode head) {
+    private static SingleListNote deleteMiddle(SingleListNote head) {
         if(head == null || head.next == null) return null;
-        ListNode slow = head, fast = head, temp = new ListNode(-1);
+        SingleListNote slow = head, fast = head, temp = new SingleListNote(-1);
         temp.next = head;
 
         while(fast != null && fast.next != null){

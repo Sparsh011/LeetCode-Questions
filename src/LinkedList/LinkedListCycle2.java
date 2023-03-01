@@ -2,13 +2,13 @@ package LinkedList;
 
 public class LinkedListCycle2 {
 //    In this question, we have to return the node where cycle was found.
-    public ListNode detectCycle(ListNode head) {
+    public SingleListNote detectCycle(SingleListNote head) {
         if(head == null || head.next == null) return null;
-        ListNode slow = new ListNode(-1);
-        ListNode temp = new ListNode(-1);
+        SingleListNote slow = new SingleListNote(-1);
+        SingleListNote temp = new SingleListNote(-1);
         slow.next = head;
         temp.next = head;
-        ListNode fast = head;
+        SingleListNote fast = head;
         boolean found = false;
 
         while(fast != null && fast.next != null){

@@ -1,10 +1,10 @@
 package LinkedList;
 
 public class LinkedListCycle1 {
-    public boolean hasCycle(ListNode head) {
-        ListNode slow = new ListNode(-1);
+    public boolean hasCycle(SingleListNote head) {
+        SingleListNote slow = new SingleListNote(-1);
         slow.next = head;
-        ListNode fast = head;
+        SingleListNote fast = head;
 
         while(fast != null && fast.next != null){
             slow = slow.next;

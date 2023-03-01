@@ -2,10 +2,10 @@ package LinkedList;
 
 public class RemoveNthElementFromEnd {
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public SingleListNote removeNthFromEnd(SingleListNote head, int n) {
         if(head == null || (head.next == null)) return null;
         int position = n;
-        ListNode fast = head, slow = head;
+        SingleListNote fast = head, slow = head;
 
         while(position-- > 0 && fast != null){
             fast = fast.next;

@@ -12,11 +12,11 @@ public class RotateList {
 
 //    Cut the nodes that will come to the front after rotation and attach them to the beginning of the list. TC - O(N) and SC - O(1).
 
-    public ListNode rotateRight(ListNode head, int k) {
+    public SingleListNote rotateRight(SingleListNote head, int k) {
         if(head == null || head.next == null) return head;
-        ListNode res = new ListNode(-1);
+        SingleListNote res = new SingleListNote(-1);
         int size = 1;
-        ListNode fast = head;
+        SingleListNote fast = head;
 
         while(fast.next != null){
             size++;
@@ -25,7 +25,7 @@ public class RotateList {
         int newK = k % size;
         if(newK == 0) return head;
 
-        ListNode temp = head;
+        SingleListNote temp = head;
 
         for(int i = size - newK - 1; i > 0; i--){
             temp = temp.next;
