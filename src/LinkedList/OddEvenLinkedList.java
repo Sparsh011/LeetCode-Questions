@@ -1,10 +1,10 @@
 package LinkedList;
 
 public class OddEvenLinkedList {
-    public SingleListNote oddEvenList(SingleListNote head) {
+    public ListNode oddEvenList(ListNode head) {
         if(head == null || head.next == null) return head;
-        SingleListNote oddTail = head, evenTail = head.next;
-        SingleListNote oddHead = head, evenHead = head.next;
+        ListNode oddTail = head, evenTail = head.next;
+        ListNode oddHead = head, evenHead = head.next;
 
         // Making odd store the reference of even node and so on :
 

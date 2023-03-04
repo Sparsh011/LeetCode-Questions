@@ -4,11 +4,11 @@ public class Add2Numbers {
 //    Input: l1 = [2,4,3], l2 = [5,6,4]
 //    Output: [7,0,8]
 
-    public SingleListNote addTwoNumbers(SingleListNote l1, SingleListNote l2) {
-        SingleListNote res = new SingleListNote(-1);
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode res = new ListNode(-1);
         int carry = 0;
-        SingleListNote nextForRes = res;
-        SingleListNote temp1 = l1, temp2 = l2;
+        ListNode nextForRes = res;
+        ListNode temp1 = l1, temp2 = l2;
 
         while(temp1 != null || temp2 != null){
             int num1 = temp1 == null ? 0 : temp1.val;
@@ -18,7 +18,7 @@ public class Add2Numbers {
             carry = sum / 10;
             int newSum = sum % 10;
 
-            SingleListNote nextNode = new SingleListNote(newSum);
+            ListNode nextNode = new ListNode(newSum);
             nextForRes.next = nextNode;
             nextForRes = nextForRes.next;
 
@@ -27,7 +27,7 @@ public class Add2Numbers {
         }
 
         if(carry != 0){
-            SingleListNote nextNode = new SingleListNote(carry);
+            ListNode nextNode = new ListNode(carry);
             nextForRes.next = nextNode;
         }
 
