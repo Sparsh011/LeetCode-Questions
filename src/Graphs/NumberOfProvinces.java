@@ -1,6 +1,9 @@
 package Graphs;
 
 public class NumberOfProvinces {
+
+//    In this question, we have to visit all the CONNECTED NODES in one iteration. In NumberOfIslands, we have to visit all the 1's and mark them visited because they are a part of an island.
+
     public int findCircleNum(int[][] isConnected) {
         int n = isConnected.length;
         boolean[] vis = new boolean[n];
