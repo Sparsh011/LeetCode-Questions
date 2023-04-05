@@ -4,8 +4,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BipartiteGraph {
-    class Solution {
-        public boolean isBipartite(int[][] graph) {
+
+//    BFS solution -
+        public boolean isBipartiteBFS(int[][] graph) {
             int n = graph.length;
             int[] color = new int[n];
 
@@ -32,5 +33,38 @@ public class BipartiteGraph {
 
             return true;
         }
-    }
+
+
+//        DFS solution -
+
+        public boolean isBipartiteDFS(int[][] graph) {
+//         DFS solution -
+            int length = graph.length;
+            int[] colors = new int[length];
+
+            for(int i = 0; i < length; i++){
+                if(colors[i] == 0){
+                    if(!helper(i, length, graph, 1, colors)){
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        private boolean helper(int currentNode, int v, int[][] graph, int colorForNextNode, int[] colors){
+            if(colors[currentNode] != 0){
+                return colors[currentNode] == colorForNextNode;
+            }
+
+            colors[currentNode] = colorForNextNode;
+
+            for(int neighbor : graph[currentNode]){
+                if(!helper(neighbor, v, graph, -colorForNextNode, colors)) return false;
+            }
+
+            return true;
+        }
+
 }
